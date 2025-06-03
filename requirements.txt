@@ -1,0 +1,9 @@
+# Установите Heroku CLI
+heroku login
+heroku create your-app-name
+git init
+heroku git:remote -a your-app-name
+git add .
+git commit -am "Initial commit"
+git push heroku master
+heroku ps:scale worker=1
